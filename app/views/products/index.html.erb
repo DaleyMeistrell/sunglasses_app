@@ -1,0 +1,11 @@
+<h1>View All Sunglasses</h1>
+
+	<% @products.each do |product| %>
+
+		<div>Name: <%= product.name %></div>
+		<div>Price: $<%= product.price %></div>
+		<div>Description: <%= product.description %></div>
+		<div><%= link_to "#{"View the " + product.name + " Sunglasses"}", product_path(product.name) %></div>
+	<br>
+	<br>
+<% end %>
