@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
 	end
 
 	def update
-		@product = Product.find_by(name: params[:name])
+		@product = Product.find(params[:id])
 		if @product.update_attributes(params.require(:product).permit(:name, :price, :weight, :inventory, :description))
 			redirect_to products_path
 		else
@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
 	end
 
 	def destroy
-		@product = Product.find_by(params[:id])
+		@product = Product.find(params[:id])
 		@product.destroy
 		redirect_to products_path 
 	end
