@@ -20,4 +20,17 @@ class ProductsController < ApplicationController
 			render :new
 		end
 	end
+
+	def edit
+		@product = Product.find_by(name: params[:name])
+	end
+
+	def update
+		@product = Product.find_by(name: params[:product][:name])
+		if @product.update_attributes(params.require(:product).permit(:name, :price, :weight, :inventory, :description))
+			redirect_to products_path
+		else
+			render :edit
+		end
+	end
 end
