@@ -6,7 +6,10 @@
 		<div>Price: $<%= product.price %></div>
 		<div>Description: <%= product.description %></div>
 		<div><%= link_to "#{"View the " + product.name + " Sunglasses"}", product_path(product.name) %></div>
-		
+		<div><%= image_tag product.image.url(:large) %></div>
+
 	<br>
 	<br>
 <% end %>
+
+<div><%= link_to "Add New Product", new_product_path %>
