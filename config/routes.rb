@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "products#index"
   get "products" => "products#index"
   get "products/new" => "products#new", as: :new_product
   get "products/:name" => "products#show", as: :product 
