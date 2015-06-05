@@ -1,23 +1,52 @@
-<h1>Sign Up</h1>
+<br>
+<br>
+<br>
+<br>
 <%= form_for @user do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sign Up To Sunglasses For Days<small></small></h3>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                    <!-- This is my bootstrap form field for Name -->
+                    <%= f.text_field :name, placeholder: "Name", :class => "form-control input-sm", id: "name" %>
+                    </div>
+                  </div>
+                </div>
+                    <!-- This is my bootstrap form field for email address -->
+                <div class="form-group">
+                <%= f.text_field :email, placeholder: "Email Address", :class => "form-control input-sm", id: "email" %>
+                </div>
+               
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                  <!-- This is my bootstrap form field for password -->
+                    <div class="form-group">
+                    <%= f.password_field :password, placeholder: "Password", :class => "form-control input-sm", id: "password_confirmation" %>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                  <!-- This is my bootstrap form field for confirm password -->
+                    <div class="form-group">
+                    <%= f.password_field :password_confirmation, placeholder: "Confirm Password", :class => "form-control input-sm", id: "password_confirmation" %>
+                    </div>
+                  </div>
+                </div>
+                <!-- This is my bootstrap submit button for signing up -->
+                 <%= f.submit :Submit, :class => "btn btn-info btn-block" %>
+                
+              
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
