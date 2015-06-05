@@ -14,6 +14,17 @@ Rails.application.routes.draw do
   post 'login'    => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  get 'products/:product_id/comments' => 'comments#index', as: :product_comments
+  post 'products/:product_id/comments' => 'comments#create'
+  get 'products/:product_id/comments/new' => 'comments#new', as: :new_product_comment
+  get 'products/:product_id/comments/:id/edit' => 'comments#edit', as: :edit_product_comment
+  get 'products/:product_id/comments/:id' => 'comments#show', as: :product_comment
+  patch 'products/:product_id/comments/:id' => 'comments#update'
+  put 'products/:product_id/comments/:id' => 'comments#update'
+  delete 'products/:product_id/comments/:id' => 'comments#destroy'
+
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
