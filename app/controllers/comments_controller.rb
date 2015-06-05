@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @product = Product.find(params[:product_id])
     @comment = @product.comments.find(params[:id])
     @comment.destroy
-    redirect_to product_path(@product)
+    redirect_to product_path(@product.name)
   end
  
   private
