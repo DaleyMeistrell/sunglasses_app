@@ -1,15 +1,35 @@
-<h1>Log In</h1>
+<br>
+<br>
 <%= form_for :login do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.submit 'Log In' %>
-  </div>
-<% end %>
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Login To Sunglasses For Days<small></small></h3>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                    <!-- This is my bootstrap login form field for email address -->
+                    <%= f.text_field :email, placeholder: "Email", :class => "form-control input-sm", id: "email", :required => true %>
+                    </div>
+                  </div>
+                </div>
+                    <!-- This is my bootstrap login form field for password -->
+                <div class="form-group">
+                <%= f.text_field :password, placeholder: "Password", :class => "form-control input-sm", id: "password", :required => true %>
+                </div>
+            
+                <!-- This is my bootstrap submit button for logging in -->
+                 <%= f.submit :Submit, :class => "btn btn-info btn-block" %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
 
