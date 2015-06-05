@@ -16,26 +16,26 @@
                   <div class="col-xs-12">
                     <div class="form-group">
                     <!-- This is my bootstrap form field for Name -->
-                    <%= f.text_field :name, placeholder: "Name", :class => "form-control input-sm", id: "name" %>
+                    <%= f.text_field :name, placeholder: "Name", :class => "form-control input-sm", id: "name", :required => true %>
                     </div>
                   </div>
                 </div>
                     <!-- This is my bootstrap form field for email address -->
                 <div class="form-group">
-                <%= f.text_field :email, placeholder: "Email Address", :class => "form-control input-sm", id: "email" %>
+                <%= f.text_field :email, placeholder: "Email Address", :class => "form-control input-sm", id: "email", :required => true %>
                 </div>
                
                 <div class="row">
                   <div class="col-xs-6 col-sm-6 col-md-6">
                   <!-- This is my bootstrap form field for password -->
                     <div class="form-group">
-                    <%= f.password_field :password, placeholder: "Password", :class => "form-control input-sm", id: "password_confirmation" %>
+                    <%= f.password_field :password, placeholder: "Password", :class => "form-control input-sm", id: "password_confirmation", :required => true %>
                     </div>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-6">
                   <!-- This is my bootstrap form field for confirm password -->
                     <div class="form-group">
-                    <%= f.password_field :password_confirmation, placeholder: "Confirm Password", :class => "form-control input-sm", id: "password_confirmation" %>
+                    <%= f.password_field :password_confirmation, placeholder: "Confirm Password", :class => "form-control input-sm", id: "password_confirmation", :required => true  %>
                     </div>
                   </div>
                 </div>
