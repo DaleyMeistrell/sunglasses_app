@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 body {
  padding-top: 70px;
  } 
@@ -15,3 +16,10 @@ body {
  #header-button:hover {
  border: 1px solid black;
  }
+
+ .row {
+ 	text-align: center;
+}
+img { 
+	max-width: 100%; height: auto; 
+}

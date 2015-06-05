@@ -1,15 +1,11 @@
-<h1>View All Sunglasses</h1>
-
-	<% @products.each do |product| %>
-
-		<div>Name: <%= product.name %></div>
-		<div>Price: $<%= product.price %></div>
-		<div>Description: <%= product.description %></div>
-		<div><%= link_to "#{"View the " + product.name + " Sunglasses"}", product_path(product.name) %></div>
-		<div><%= image_tag product.image.url(:large) %></div>
-
-	<br>
-	<br>
+<div class="row">
+  <div class="col-md-12"><h1>View All Sunglasses</h1></div>
+  		<% @products.each do |product| %>
+			  <div class="col-md-12">Name: <%= product.name %></div>
+			  <div class="col-md-12">Price: $<%= product.price %></div>
+			  <div class="col-md-12">Description: <%= product.description %></div>
+			  <div class="col-md-12"><%= link_to "#{"View the " + product.name + " Sunglasses"}", product_path(product.name) %></div>
+			  <div class="col-md-12"><%= image_tag product.image.url(:large) %></div>
 <% end %>
+ <div class="col-md-12"><%= link_to "Add New Product", new_product_path %></div>
 
-<div><%= link_to "Add New Product", new_product_path %>
