@@ -35,6 +35,14 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_host_name => 'sunglasses-app.s3-website-us-west-1.amazonaws.com',
+  :s3_credentials => {
+    :bucket => 'sunglasses-app'
+  }
+}
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
