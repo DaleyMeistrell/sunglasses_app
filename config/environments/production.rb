@@ -36,15 +36,15 @@ Rails.application.configure do
   config.assets.digest = true
 
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_host_name => 'sunglasses-app.s3-website-us-west-1.amazonaws.com',
-  :s3_credentials => {
-    :bucket => 'sunglasses-app',
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  }
-}
+    :storage => :s3,
+    :s3_host_name => 'sunglasses-app.s3-website-us-west-1.amazonaws.com',
+    :s3_credentials => {
+      :bucket => 'sunglasses-app',
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
 
+  }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.

@@ -8,9 +8,8 @@ Rails.application.configure do
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
-  }
 
-}
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
