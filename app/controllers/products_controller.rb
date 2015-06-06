@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
 
 	def index
 		@products = Product.all
+		puts ENV['AWS_ACCESS_KEY_ID']
+		puts ENV['AWS_SECRET_ACCESS_KEY']
 	end
 
 	def show

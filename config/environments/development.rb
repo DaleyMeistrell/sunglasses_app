@@ -1,10 +1,15 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => 'sunglasses-app'
+    :storage => :s3,
+    :s3_host_name => 'sunglasses-app.s3-website-us-west-1.amazonaws.com',
+    :s3_credentials => {
+      :bucket => 'sunglasses-app',
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
+
 }
 
   # In the development environment your application's code is reloaded on
