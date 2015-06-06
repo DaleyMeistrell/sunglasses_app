@@ -41,8 +41,8 @@ class ProductsController < ApplicationController
 	end
 
 	
-  	private
-  	def product_params
-    params.require(:product).permit(:title, :body, :image)
- 	end
+  # 	private
+  # 	def product_params
+  #   params.require(:product).permit(:title, :body, :image)
+ 	# end
 end
